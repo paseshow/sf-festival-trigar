@@ -31,7 +31,7 @@ public class FormInitialController {
 	@Autowired
 	private FormInitialServiceImpl formInitialServiceImpl;
 	
-	@PreAuthorize("hasRole('ROLE_SUPER_ADMIN')")
+
 	@PostMapping(name = "add", path = "add")
 	public ResponseEntity<?> addFormulario (@Valid @RequestBody FormInitial formInital) {
 		formInitialServiceImpl.save(formInital);
